@@ -1,19 +1,17 @@
-class Api::v1::UsersController < ApplicationController
+class UsersController < ApplicationController
 
     def index
-        users=User.allo
+        users=User.all
         render json: users
     end 
 
     def create
-        if User.find_by(:name=> user_params[:name])
-            user=User.find_by(:name=>user_params[:name])
-            edirect_to "/api/v1/users/#{user.id}"
-        else 
+         
+            
             user = User.create(user_params)
-            user.save!
+            binding.pry
             render json: user
-        end 
+        
     end 
 
     def show
