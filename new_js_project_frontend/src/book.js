@@ -71,3 +71,4 @@ class Book {
         p.innerHTML = `Title: ${this.title}</br>Author:${this.author}</br>Review:${this.review}</br>Rating:${this.rating}`
         let deleteButton = `<button type="button" id="${this.id}">X</button>`
         p.insertAdjacentHTML('beforeend', deleteButton)
+        bc[0].appendChild(p)
