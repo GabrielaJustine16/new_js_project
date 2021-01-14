@@ -67,3 +67,5 @@ class Book {
     appendBook() {
         let bc = document.getElementsByClassName('books-container')
         let p = document.createElement('p')
+        p.setAttribute('data-id', this.id)
+        p.innerHTML = `Title: ${this.title}</br>Author:${this.author}</br>Review:${this.review}</br>Rating:${this.rating}`
