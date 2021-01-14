@@ -29,3 +29,37 @@ class Book {
 
     static postBook(user_id) {
         let newForm = document.getElementById('new-book-form')
+        newForm.addEventListener('submit', function(e){
+            e.preventDefault()
+            fetch('http://localhost:3000/books',{
+                method: 'POST',
+                headers: {
+                    'Content-Type' : 'application/json',
+                    'Accept' : 'application/json'
+                },
+                body: JSON.stringify({
+                    book: {
+                        title: e.target.children[1].value,
+                        author: e.target.children[3].value,
+                        review: e.target.children[5].value,
+                        rating: e.target.children[7].value,
+                        user_id: user_id
+                    }
+                })
+            })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(); 
+                }
+                return res.json();
+            })
+            .then(json => {
+                let newBook = new Book(json);
+                console.log(newBook)
+                newBook.appendBook()
+            })
+            .catch(error => {
+                console.error('Book Class Error', error)
+            })
+        })
+    }
