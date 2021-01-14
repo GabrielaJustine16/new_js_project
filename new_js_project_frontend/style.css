@@ -1,0 +1,106 @@
+
+body {
+    margin: 10;
+    padding: 10;
+    text-align: center;
+  }
+
+  .page-title {
+    border: 5px solid black;
+    /* color: #f8b63b; */
+    color: #d9f826;
+    /* display: flex; */
+    font-weight: normal; 
+    text-align: center; 
+    /* margin: 50px 50px 50px 50px; */
+    font-size: 8em;
+    /* padding: 10px; */
+    background-color: rgb(131, 29, 46);
+    text-shadow: 2px 2px #b1076a;
+}
+
+.user-greeting {
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgb(197, 186, 175);
+    opacity: 90%;
+    width: 60%;
+    border: 5px solid black;
+    padding: 30px;
+    font-size:  1em;
+}
+
+.books-container {
+    background-color: rgb(197, 186, 175);
+    opacity: 90%;
+    width: 60%;
+    border: 5px solid black;
+    /* padding: 30px; */
+    font-size:  1em;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 20px;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+h3 {
+    color: black;
+    font-size: 1em;
+}
+
+input[type=text] {
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 50%;
+  }
+
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #ce0d2d;
+    border: solid black ;
+    border-radius: 12px;
+    color: rgb(218, 198, 179);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 15px 2px;
+    cursor: pointer;
+  }
+
+  #new-user-form {
+      /* font-family: 'Montserrat', sans serfi; */
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+      width: 20%;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 35px;
+      font-size: 25px;
+      transition: width 0.4s ease-in
+
+  }
+
+  #new-book-form {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    width: 20%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 35px;
+    font-size: 25px;
+  }
+
+  .hidden {
+      display: none;
+  }
