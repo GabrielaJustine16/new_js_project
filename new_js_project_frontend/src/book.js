@@ -23,3 +23,6 @@ class Book {
          <input type="submit"/>
          </form>
          `
+         body.insertAdjacentHTML('beforeend', form)
+        Book.postBook(user_id)
+}
