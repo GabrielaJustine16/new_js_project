@@ -72,3 +72,6 @@ class Book {
         let deleteButton = `<button type="button" id="${this.id}">X</button>`
         p.insertAdjacentHTML('beforeend', deleteButton)
         bc[0].appendChild(p)
+        let button = document.getElementById(`${this.id}`)
+        this.deleteBook(button)
+}
