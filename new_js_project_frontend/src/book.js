@@ -26,3 +26,6 @@ class Book {
          body.insertAdjacentHTML('beforeend', form)
         Book.postBook(user_id)
 }
+
+    static postBook(user_id) {
+        let newForm = document.getElementById('new-book-form')
