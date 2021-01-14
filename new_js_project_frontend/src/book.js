@@ -63,3 +63,7 @@ class Book {
             })
         })
     }
+
+    appendBook() {
+        let bc = document.getElementsByClassName('books-container')
+        let p = document.createElement('p')
