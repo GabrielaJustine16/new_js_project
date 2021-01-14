@@ -75,3 +75,16 @@ class Book {
         let button = document.getElementById(`${this.id}`)
         this.deleteBook(button)
 }
+
+//Delete a users book
+deleteBook(button) {
+    button.addEventListener('click', function(e){
+        e.preventDefault()
+        fetch(`http://localhost:3000/books/${e.target.parentNode.dataset.id}`, {
+            method: 'DELETE'
+        })
+        e.target.parentElement.remove();
+    })
+}
+
+}
